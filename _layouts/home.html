@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div id="main" role="main" style="width: 100%;">			
+	<div class="wrap" style="width: 100%;">
+		{% if page.image %}
+        <div class="page-lead" style="position: relative; width: 100%;">
+            
+            <div class="wrap page-lead-content" style="position: absolute; width: 100%; height: 100%">
+            <h1>Rez Works.</h1>
+            <h2>Buy It. Learn It. Do It.</h2>
+        </div><!-- /.page-lead-content -->
+        <img src="{{ site.url }}/images/{{ page.image }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
+    </div>
+		{% endif %}
+		<div class="page-title">
+			<h2>{{ page.title }}</h2>
+			{% if page.excerpt %}<h2>{{ page.excerpt }}</h2>{% endif %}
+		</div>
+		<div class="archive-wrap">
+			<div class="page-content">
+				{{ content }}
+			</div><!-- /.page-content -->
+		</div class="archive-wrap"><!-- /.archive-wrap -->
+	</div><!-- /.wrap -->
+</div><!-- /#main -->
